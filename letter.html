@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Your Letter</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div class="letter-container">
+        <h1>Open Your Letter</h1>
+
+        <!-- Letter Image -->
+        <div class="letter-image-container">
+            <!-- This is the clickable letter image -->
+            <img src="love-letter-love-letters.gif" alt="Click to open letter" class="letter-image" onclick="openLetter()">
+        </div>
+
+        <!-- Letter Text (Initially Hidden) -->
+        <div class="letter-text-container" id="letter-text" style="display: none;">
+            <div class="letter-text">
+                <p>Dear Kristinaru <3,</p>
+                <p>Happy Valentine's Day! 💖</p>
+                <p>I just wanted to take a moment to remind you how incredibly beautiful you are—inside and out. Your smile lights up my day, and your kindness and strength make you even more stunning. Every time I see you, I feel like the luckiest person alive.</p>
+                <p>You make my heart skip a beat, and I can’t imagine my world without you in it. I’m so grateful to have you by my side, today and every day. Wishing you all the love and happiness you deserve, now and always. ❤️</p>
+                <p>With all my love, <br>T</p>
+            </div>
+        </div>
+
+        <button onclick="window.location.href='index.html';">Go Back</button>
+    </div>
+
+    <script>
+        // Function to show the letter text when the letter image is clicked
+        function openLetter() {
+            document.getElementById('letter-text').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

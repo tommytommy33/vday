@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <!-- Small GIF above the "Will you be my Valentine?" section -->
+    <div class="gif-container">
+        <img src="mocha-bear-hearts.gif" alt="Valentine's Gif" class="gif-image">
+    </div>
+
+    <h1>Will you be my Valentine?</h1>
+
+    <div class="buttons-container">
+        <button class="yes-button" onclick="window.location.href='letter.html';">Yes</button>
+        <button class="no-button" onmouseover="moveNoButton()">No</button>
+    </div>
+
+    <script>
+        // Function to make the "No" button move randomly when hovered
+        function moveNoButton() {
+            const noButton = document.querySelector('.no-button');
+            const container = document.querySelector('.buttons-container');
+            const containerWidth = container.clientWidth;
+            const containerHeight = container.clientHeight;
+            const buttonWidth = noButton.offsetWidth;
+            const buttonHeight = noButton.offsetHeight;
+
+            const randomX = Math.random() * (containerWidth - buttonWidth);
+            const randomY = Math.random() * (containerHeight - buttonHeight);
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
